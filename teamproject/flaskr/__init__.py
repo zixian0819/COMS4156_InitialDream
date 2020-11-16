@@ -32,4 +32,11 @@ def create_app(test_config=None):
     from . import auth
     app.register_blueprint(auth.bp)
 
+    from . import gps
+    app.register_blueprint(gps.bp)
+
+
+
+
+
     return app
