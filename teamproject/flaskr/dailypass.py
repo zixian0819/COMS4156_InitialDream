@@ -11,21 +11,6 @@ from flask import Flask, render_template, request, flash
 
 bp = Blueprint('dailypass', __name__, url_prefix='/dailypass')
 
-
-# @bp.route('/submit', methods=['GET', 'POST'])
-# def submit():
-#     db = get_db()
-#     form = forms.PassForm()
-#     print(form.username.data)
-#     if form.validate_on_submit():
-#         db.execute(
-#                     'INSERT INTO dailypass (username, date,visittime,building,symptoms) VALUES (?,?,?,?,?)',
-#                     (username, date, visittime, building, symptoms)
-#                 )
-#         flash('Task added')
-#
-#     return render_template('submit.html', form=form)
-
 @bp.route('/submit', methods=['GET', 'POST'])
 def submit():
     if request.method == 'POST':
@@ -45,7 +30,11 @@ def submit():
         if user is None:
             error = 'Incorrect username.'
         if symptoms == '1':
-            error='symptoms'
+            db.execute(
+                'INSERT INTO dailypass (username, date,visittime,building,symptoms) VALUES (?,?,?,?,?)',
+                (username, date, visittime, building, symptoms)
+            )
+            db.commit()
             return render_template('yellowpass.html')
         if error is None:
             db.execute(

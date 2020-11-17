@@ -38,6 +38,13 @@ def create_app(test_config=None):
     from . import dailypass
     app.register_blueprint(dailypass.bp)
 
+    from . import ocr
+    app.register_blueprint(ocr.bp)
 
+    from . import reminder
+    app.register_blueprint(reminder.bp)
+
+    from . import index
+    app.register_blueprint(index.bp)
 
     return app

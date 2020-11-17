@@ -13,7 +13,7 @@ GoogleMaps(app)
 
 import googlemaps
 
-API_KEY = "AIzaSyCV6i7A51OYP5oeqzi4d1vpl05wSFRLtcc"
+API_KEY = "AIzaSyB4OcXSEzn7nWLIKGHoossv2g0kiRkohBY"
 
 
 bp = Blueprint('locate', __name__,url_prefix='/locate')
@@ -28,8 +28,10 @@ def locate():
     # api-endpoint
     URL = "https://revgeocode.search.hereapi.com/v1/revgeocode"
     # API key
-    api_key = '0Kyf34G-M29rR0x44xq-BX02bxhQwsXIhCOmEFY7Eh0'
+    api_key = 'jpDAhF_gyaj_2SgWcXsvAnYGw8ssVc6RnkLjufLyQh4'
     # Defining a params dictionary for the parameters to be sent to the API
+    #https://developer.here.com/sign-up?create=Freemium-Basic&keepState=true&step=account
+    #get api key
     PARAMS = {
         'at': '{},{}'.format(latitude, longitude),
         'apikey': api_key

@@ -1,15 +1,60 @@
+i
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Log In{% endblock %}</h1>
+<head>
+  <h1 align="center">{% block title %}Log In{% endblock %}</h1>
+
+
+  
+
+
+
 {% endblock %}
 
 {% block content %}
+<div style = "    background-color: white;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;" class="login">
+  <img  style = "    margin-top: 20px;
+  margin-bottom: 20px;
+  width: 150px;
+  object-fit: contain;"class = "login__logo"src="https://wjm.s3.amazonaws.com/womenleaderinco/uploads/133_1576257529.jpg" />
+<div 
+style = "width: 400px;
+display: flex;
+align-items: center;
+flex-direction: column;
+padding: 50px;
+border: 1px solid lightskyblue;"
+ class="login__container">
+  <h1>Sign in</h1>
   <form method="post">
-    <label for="username">Username</label>
-    <input name="username" id="username" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
-    <input type="submit" value="Log In">
+
+  <label for="username"  style = "font-size: 30;"class = "name" >Username</label>
+    <input name="username"  class = "password" id="username" required>
+  
+    <label for="password" style = "font-size: 30;" class = "name">Password</label>
+    <input type="password" class = "password"  name="password" id="password" required>  
+    <p>
+      By click this, you are agree to our policy.
+  </p>  
+    <input type="submit"  style = "font-size: 30;"class= "password"  value="Log In" >
+    
+  
   </form>
+  </div>
+</div>
+
+</body>
+
+
+
+</head>
+
+
+
+
 {% endblock %}
