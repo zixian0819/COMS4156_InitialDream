@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}DailyForm{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="username">Username</label>
+    <input name="username" id="username" required>
+    <label for="date">Date</label>
+    <input name="date" id="date" required>
+      <label for="visittime">Visittime</label>
+    <input name="visittime" id="visittime" required>
+
+       <label for="symptoms">Symptoms</label>
+    <input name="symptoms" id="symptoms" required>
+
+
+
+            <input type="radio" name="building" value="Mudd" >Mudd<br>
+            <input type="radio" name="building" value="NWC" >NWC<br>
+            <input type="radio" name="building" value="Bulter" >Bulter<br>
+            <input type="radio" name="building" value="Gym" >Gym<br>
+            <input type="radio" name="building" value="Lerner_Hall" >Lerner Hall<br>
+
+
+
+
+     <input type="submit" value="Submit">
+  </form>
+{% endblock %}
