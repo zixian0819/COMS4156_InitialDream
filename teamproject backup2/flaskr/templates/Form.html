@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta charset='utf-8'>
+<style type="text/css">
+*{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+     }
+     body{
+      font-family: sans-serif,Verdana, Helvetica, Arial;
+     }
+         #main{
+          padding-left: 350px;
+         }
+        .kv-item{
+     padding-left: 100px;
+     padding-bottom: 20px;
+       }
+        .kv-label{
+     display: inline;
+     height: 28px;
+     line-height: 28px;
+     margin-left: -100px;
+     float: left;
+     text-align: right;
+     width: 100px;
+       }
+       .text-align{
+     border:1px solid #474E63;
+     color: #0A1844;
+     height: 26px;
+     line-height:26px;
+     padding:0 2px;
+     width: 177px; 
+     text-align: left;
+        }
+        #submit{
+     margin-left: 80px;
+     border:1px solid #474E63;
+     height: 26px;
+     font-weight: bold;
+       }
+       #reset{
+     border:1px solid #474E63;
+     height: 26px;
+     font-weight: bold;
+       }
+ </style>
+ <!--CSS部分结束-->
+ <!--此处插入JS代码-->
+ <script type="text/javascript">
+        //判断前三个表单元素（用户名、密码、确认密码是否为空）
+   function check(Form){
+ var check=true;
+ var flag=0;
+ for(i=0;i<3;i++){
+  if(Form.elements[i].value=="")
+  {alert(Form.elements[i].title+"不能为空！");
+  Form.elements[i].focus();
+  check=false;
+  return false;}
+  //判断两次输入的密码是否相同
+  if(i==2)
+  if(Form.pwd.value!=Form.repwd.value)
+   {alert("两次输入密码不同，请重新输入！");
+  Form.repwd.value="";
+     Form.pwd.value="";
+  //Form.pwd.focus();
+  i=i-2;
+  continue;
+  }
+ }
+return check;
+}
+</script>
+<!--JS代码结束-->
+</head>
+<body background="8.jpg">
+    <h1 align="center">Form </h1>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+   <div id="main">
+         <form name="personalForm" method="post" action="RegisterController" onSubmit="return check(this)">
+           <div class="kv-item">
+               <span class="kv-label">
+             <label class="tsl" for="name">Username：</label>
+              </span>
+               <input type="text" name="name"class="text-align" id="name" placeholder="*必填项" autofocus size="25" title="用户名" >
+         </div>
+       
+       <div class="kv-item">
+        <span class="kv-label">
+         <label class="tsl" for="pwd">密&nbsp;码：</label>
+        </span>
+        <input type="password" name="pwd" class="text-align" id="pwd" placeholder="*必填项" size="25" title="密码" >
+       </div>
+   
+      <div class="kv-item">
+           <span class="kv-label">
+            <label class="tsl" for="repwd">确认密码：</label>
+           </span>
+           <input type="password" name="repwd" class="text-align" id="repwd" placeholder="*必填项" size="25" title="确认密码">
+       </div>
+        
+       <div class="kv-item">
+        <span class="kv-label">
+         <label class="tsl" for="sex_boy">Gender：</label>
+        </span>
+        <input type="radio" name="sex"  value="M" checked >Male
+        <input type="radio" name="sex"  value="F">Female
+        <input type="radio" name="sex"  value="NTT">Not to tell
+       </div>
+    
+       <div class="kv-item">
+        <span class="kv-label">
+         <label class="tsl" for="student">Birthday：</label>
+        </span>
+        <table>
+        <tr>
+        <th>
+      
+        
+        <th>
+        <select>
+          <option value="年">year</option>
+          <option name="year" value="2016">2016</option>
+          <option name="year" value="2015">2015</option>
+          <option name="year" value="2014">2014</option>
+          <option name="year" value="2013">2013</option>
+        <select>
+        </th>
+        <th>
+        <select>
+          <option name="month" value="月">month</option>
+          <option name="month"value="01">01</option>
+          <option name="month"value="02">02</option>
+          <option name="month"value="03">03</option>
+          <option name="month"value="04">04</option>
+          <option name="month"value="05">05</option>
+          <option name="month"value="06">06</option>
+          <option name="month" value="07">07</option>
+          <option name="month"value="08">08</option>
+          <option name="month"value="09">09</option>
+          <option name="month"value="10">10</option>
+          <option name="month"value="11">11</option>
+          <option name="month"value="12">12</option>
+        <select>
+        </th>
+        <th>
+        <select>
+          <option value="日">day</option>
+          <option  name="day"value="01">01</option>
+          <option  name="day"value="02">02</option>
+          <option  name="day"value="03">03</option>
+          <option  name="day"value="04">04</option>
+          <option  name="day" value="05">05</option>
+          <option  name="day"value="06">06</option>
+          <option  name="day"value="07">07</option>
+          <option  name="day" value="08">08</option>
+          <option  name="day"value="09">09</option>
+          <option  name="day"value="10">10</option>
+          <option  name="day"value="11">11</option>
+          <option  name="day"value="12">12</option>
+          <option  name="day"value="13">13</option>
+          <option  name="day"value="14">14</option>
+          <option  name="day"value="15">15</option>
+          <option  name="day"value="16">16</option>
+          <option  name="day"value="17">17</option>
+          <option  name="day"value="18">18</option>
+          <option  name="day"value="19">19</option>
+          <option  name="day"value="20">20</option>
+          <option  name="day"value="21">21</option>
+          <option  name="day"value="22">22</option>
+          <option  name="day"value="23">23</option>
+          <option  name="day"value="24">24</option>
+          <option  name="day"value="25">25</option>
+          <option  name="day"value="26">26</option>
+          <option  name="day"value="27">27</option>
+          <option  name="day"value="28">28</option>
+          <option  name="day"value="29">29</option>
+          <option  name="day"value="30">30</option>
+          <option  name="day"value="31">31</option>
+        <select>
+        </th>
+        </tr>
+        </table>
+     </div>
+   
+  <div class="kv-item">
+    <span class="kv-label">
+     <label class="tsl" for="student">Buildings&Time：</label>
+    </span>
+    <table>
+        <tr>
+                <th>
+                <select>
+                  <option value="Buildings">Buildings</option>
+                  <option value="Mudd">Mudd</option>
+                  <option value="Learnr Hall">Learnr Hall</option>
+                  <option value="NWC">NWC</option>
+                <select>
+   
+               <select>
+                 <option value="Time">Time</option>
+                 <option value="00:00~08:00">00:00~08:00</option>
+                 <option value="08:00~16:00">08:00~16:00</option>
+                 <option value="16:00~24:00">16:00~24:00</option>
+               <select>
+           </th>
+     </tr>
+   </table>
+   </div>
+   
+       <div class="kv-item">
+        <span class="kv-label">
+         <label class="tsl">Phone&nbsp;Number：</label>
+        </span>
+         <input type="password" name="telephone" class="text-align"  placeholder="*必填项" size="25" title="手机号码">
+       </div>
+   
+       <div class="kv-item">
+        <input type="submit" name="submit" id="submit" value="Submit" >
+        <input type="reset" name="reset" id="reset" value="Reset"></div>
+  </form>
+ </div>
+</body>
+</html>

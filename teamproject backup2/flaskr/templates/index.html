@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Home Page{% endblock %}</h1>
+{% endblock %}
+{% block content %}
+<h1>welcome！</h1>
+
+<li><a href="{{ url_for('dailypass.submit') }}">Get your pass</a>
+      <li><a href="{{ url_for('quarantine.log') }}">Report your quarantine</a>
+    <li><a href="{{ url_for('travel.get_info') }}">update states</a>
+{% endblock %}
