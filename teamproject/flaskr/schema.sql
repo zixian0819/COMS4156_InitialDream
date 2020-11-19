@@ -32,7 +32,20 @@ CREATE TABLE "dailypass" (
 CREATE TABLE "quarantine" (
 	"id"	INTEGER,
 	"username"	TEXT NOT NULL,
-	"date"	INTEGER,
-	"is_quarantine"	BOOL,
+	"date" INTEGER,
+	"quarantine_validity" BOOL,
+	"symptoms" BOOL,
+	"latitude" FLOAT,
+	"longitude" FLOAT,
 	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+CREATE TABLE high_risk_states (
+  id INTEGER,
+  statename TEXT NOT NULL
+);
+
+CREATE TABLE yellow_pool (
+  id INTEGER,
+  yellow_user TEXT NOT NULL
 );

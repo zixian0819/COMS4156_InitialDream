@@ -1,0 +1,1 @@
+(base) Shuwans-MBP:teamproject shuwanyao$ flake8 $(shell git ls-files '*.py')

@@ -1,0 +1,28 @@
+============================================================= test session starts =============================================================
+platform darwin -- Python 3.7.4, pytest-5.2.1, py-1.8.0, pluggy-0.13.0
+rootdir: /Users/shuwanyao/PycharmProjects/teamproject
+plugins: arraydiff-0.3, remotedata-0.3.2, doctestplus-0.4.0, openfiles-0.4.0
+collected 24 items
+
+tests/test_auth.py ........                                                                                                             [ 33%]
+tests/test_dailypass.py .....                                                                                                           [ 54%]
+tests/test_db.py ..                                                                                                                     [ 62%]
+tests/test_factory.py .                                                                                                                 [ 66%]
+tests/test_ocr.py ....                                                                                                                  [ 83%]
+tests/test_quarantine.py ...                                                                                                            [ 95%]
+tests/test_travel.py .                                                                                                                  [100%]
+
+============================================================== warnings summary ===============================================================
+tests/test_auth.py::test_register
+  /Users/shuwanyao/opt/anaconda3/lib/python3.7/site-packages/html5lib/_trie/_base.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+    from collections import Mapping
+
+tests/test_travel.py::test_getinfo
+  /Users/shuwanyao/PycharmProjects/teamproject/flaskr/travel.py:17: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("lxml"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+  The code that caused this warning is on line 17 of the file /Users/shuwanyao/PycharmProjects/teamproject/flaskr/travel.py. To get rid of this warning, pass the additional argument 'features="lxml"' to the BeautifulSoup constructor.
+
+    bf = BeautifulSoup(html)
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+======================================================= 24 passed, 2 warnings in 4.12s ========================================================

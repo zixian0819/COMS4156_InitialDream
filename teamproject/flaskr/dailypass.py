@@ -1,30 +1,11 @@
-import functools
-
 from flask import (
-    Blueprint, flash, g, redirect, render_template, request, session, url_for, Flask, jsonify
+    Blueprint, flash, render_template, request, jsonify
 )
 from flaskr.db import get_db
-
-from flask import Flask, render_template, request, flash
-# import forms
 
 
 bp = Blueprint('dailypass', __name__, url_prefix='/dailypass')
 
-
-# @bp.route('/submit', methods=['GET', 'POST'])
-# def submit():
-#     db = get_db()
-#     form = forms.PassForm()
-#     print(form.username.data)
-#     if form.validate_on_submit():
-#         db.execute(
-#                     'INSERT INTO dailypass (username, date,visittime,building,symptoms) VALUES (?,?,?,?,?)',
-#                     (username, date, visittime, building, symptoms)
-#                 )
-#         flash('Task added')
-#
-#     return render_template('submit.html', form=form)
 
 @bp.route('/submit', methods=['GET', 'POST'])
 def submit():
@@ -40,19 +21,33 @@ def submit():
         user = db.execute(
             'SELECT * FROM user WHERE username = ?', (username,)
         ).fetchone()
-        error=None
-        print(symptoms)
+        state = request.form['state']
+        is_highrisk = db.execute('SELECT id FROM high_risk_states '
+                                 'WHERE statename = ?',
+                                 (state,)).fetchone()
+
         if user is None:
             error = 'Incorrect username.'
-        if symptoms == '1':
-            error='symptoms'
-            return render_template('yellowpass.html')
-        if error is None:
+            flash(error)
+        if symptoms == '1' or is_highrisk is not None:
             db.execute(
-                'INSERT INTO dailypass (username, date,visittime,building,symptoms) VALUES (?,?,?,?,?)',
+                'INSERT INTO dailypass (username, date,visittime,'
+                'building,symptoms) '
+                'VALUES (?,?,?,?,?)',
+                (username, date, visittime, building, symptoms)
+            )
+            db.execute('INSERT INTO yellow_pool (yellow_user) VALUES (?)',
+                       (username,))
+            db.commit()
+            return jsonify('yellowpass')
+        if symptoms == '0' and is_highrisk is None:
+            db.execute(
+                'INSERT INTO dailypass '
+                '(username, date,visittime,building,symptoms) '
+                'VALUES (?,?,?,?,?)',
                 (username, date, visittime, building, symptoms)
             )
             db.commit()
-            return render_template('greenpass.html')
-        flash(error)
+            return jsonify('greenpass')
+
     return render_template('submit.html')

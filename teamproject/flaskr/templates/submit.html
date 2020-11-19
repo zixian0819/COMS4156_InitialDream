@@ -7,24 +7,33 @@
 {% block content %}
   <form method="post">
     <label for="username">Username</label>
-    <input name="username" id="username" required>
+    <input name="username" id="username" required><br>
     <label for="date">Date</label>
-    <input name="date" id="date" required>
+    <input type="date"name="date" id="date" required><br>
       <label for="visittime">Visittime</label>
-    <input name="visittime" id="visittime" required>
+    <input name="visittime" id="visittime" required><br>
 
        <label for="symptoms">Symptoms</label>
-    <input name="symptoms" id="symptoms" required>
+    <input name="symptoms" id="symptoms" required><br>
 
-
+<br>
+<label >Building visited</label><br>
 
             <input type="radio" name="building" value="Mudd" >Mudd<br>
             <input type="radio" name="building" value="NWC" >NWC<br>
             <input type="radio" name="building" value="Bulter" >Bulter<br>
             <input type="radio" name="building" value="Gym" >Gym<br>
             <input type="radio" name="building" value="Lerner_Hall" >Lerner Hall<br>
+<br>
+<br>
+<label >State Visited in 14 days</label><br>
 
 
+            <input type="radio" name="state" value="New" >NewYork<br>
+            <input type="radio" name="state" value="Bulter" >NewJersey<br>
+            <input type="radio" name="state" value="Alabama" >Alabama<br>
+            <input type="radio" name="state" value="Alaska" >Alaska<br>
+            <input type="radio" name="state" value="Arizona" >Arizona<br>
 
 
      <input type="submit" value="Submit">

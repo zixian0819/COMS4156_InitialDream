@@ -1,1 +1,5 @@
  <h1>{% block title %}Yellowpass{% endblock %}</h1>
+ <body>{% block header %}Please quarantine yourself for 14 days!{% endblock %}</body>
+ <li><a href="{{ url_for('index.index') }}">Back to Index</a>
+ <li><a href="{{ url_for('quarantine.log') }}">Report your quarantine</a>
+ <li><a href="{{ url_for('ocr.upload_page') }}">Upload your test result</a>
