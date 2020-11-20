@@ -1,12 +1,14 @@
+"""Import required packages."""
 from flaskr.db import get_db
-db = get_db()
+
+DATABASE = get_db()
 
 
-class Task(db.Model):
-
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(255), nullable=False)
-    date = db.Column(db.Date, nullable=False)
+class Task(DATABASE.Model):  # pylint: disable=too-few-public-methods
+    """Task class."""
+    id = DATABASE.Column(DATABASE.Integer, primary_key=True)
+    title = DATABASE.Column(DATABASE.String(255), nullable=False)
+    date = DATABASE.Column(DATABASE.Date, nullable=False)
 
     def __repr__(self):
         return f'{self.title}'

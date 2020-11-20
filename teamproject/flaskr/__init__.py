@@ -1,3 +1,4 @@
+"""'defination of the app"""
 import os
 
 from flask import Flask, send_from_directory
@@ -6,7 +7,7 @@ from flaskr.user import User
 
 
 def create_app(test_config=None):
-
+    """create the app"""
     app = Flask(__name__, instance_relative_config=True,
                 static_folder='client/build', static_url_path='')
 
@@ -32,33 +33,23 @@ def create_app(test_config=None):
     login_manager.login_view = 'auth.login'
     login_manager.init_app(app)
 
-    # where this function should be？
-    @login_manager.user_loader
-    def load_user(user_id):
-        return User.get(user_id)
-
     from . import db
     db.init_app(app)
 
     from . import auth
-    app.register_blueprint(auth.bp)
+    app.register_blueprint(auth.BP)
 
     from . import dailypass
-    app.register_blueprint(dailypass.bp)
+    app.register_blueprint(dailypass.BP)
 
     from . import ocr
-    app.register_blueprint(ocr.bp)
+    app.register_blueprint(ocr.BP)
 
     from . import index
-    app.register_blueprint(index.bp)
+    app.register_blueprint(index.BP)
 
     from . import travel
-    app.register_blueprint(travel.bp)
+    app.register_blueprint(travel.BP)
 
     from . import quarantine
-    app.register_blueprint(quarantine.bp)
-
-    @app.route('/')
-    def serve():
-        return send_from_directory(app.static_folder, 'index.html')
-    return app
+    app.register_blueprint(quarantine.BP)

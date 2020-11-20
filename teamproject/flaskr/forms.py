@@ -1,8 +1,10 @@
+"""forms"""
 from flask_wtf import Form
 from wtforms import validators, SelectField, TextField, SubmitField
 
 
 class PassForm(Form):
+    """class of pass from"""
     name = TextField("username", [validators.Required
                                   ("Please enter your Username")])
 

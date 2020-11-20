@@ -1,33 +1,41 @@
-from flask_login import UserMixin  # 引入用户基类
+"""Import UserMixin."""
+from flask_login import UserMixin
 from flask_login import LoginManager
 from flask import Flask
 
-app = Flask(__name__)
-login_manager = LoginManager()
-login_manager.login_view = 'auth.login'
-login_manager.init_app(app)
+APP = Flask(__name__)
+LOGIN_MANAGER = LoginManager()
+LOGIN_MANAGER.login_view = 'auth.login'
+LOGIN_MANAGER.init_app(APP)
 
 
 class User(UserMixin):
     """用户类"""
+    # initialize
     def __init__(self, user):
+        """Initialize."""
         self.username = user.get("name")
-        self.id = user.get("id")
-        self.userstatus = user. get("status")
+        self.userid = user.get("id")
+        self.userstatus = user.get("status")
 
     def get_username(self):
+        """Get the username."""
         return self.username
 
     def set_username(self, username):
+        """Set the username."""
         self.username = username
 
     def get_userstatus(self):
+        """Get the userstatus"""
         return self.userstatus
 
     def set_userstatus(self, status):
+        """Set the userstatus"""
         self.username = status
 
 
-@login_manager.user_loader
+@LOGIN_MANAGER.user_loader
 def load_user(user_id):
-    return User.get(user_id)
+    """Load the user."""
+    return User.get_username(user_id)
