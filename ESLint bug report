@@ -1,0 +1,205 @@
+(base) MacdeAir:amzon-clone1 mac$ eslint src
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/App.js
+  13:8  error  'SectionHeader' is defined but never used  no-unused-vars
+  15:8  error  'Featuresplit' is defined but never used   no-unused-vars
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/App.test.js
+   7:1  error  'it' is not defined        no-undef
+  11:3  error  'describe' is not defined  no-undef
+  12:5  error  'test' is not defined      no-undef
+  14:9  error  'expect' is not defined    no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/BC.test.js
+   9:1   error  'describe' is not defined  no-undef
+  10:5   error  'test' is not defined      no-undef
+  12:9   error  'expect' is not defined    no-undef
+  16:1   error  'it' is not defined        no-undef
+  17:16  error  'jest' is not defined      no-undef
+  23:5   error  'expect' is not defined    no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/Form.js
+  17:17  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  18:15  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  19:17  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  19:29  error  Unknown property 'for' found, use 'htmlFor' instead          react/no-unknown-property
+  21:40  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  21:90  error  Unknown property 'autofocus' found, use 'autoFocus' instead  react/no-unknown-property
+  24:21  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  25:15  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  26:17  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  26:29  error  Unknown property 'for' found, use 'htmlFor' instead          react/no-unknown-property
+  33:21  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  34:11  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  35:13  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  35:25  error  Unknown property 'for' found, use 'htmlFor' instead          react/no-unknown-property
+  47:22  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  48:11  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  49:13  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  49:25  error  Unknown property 'for' found, use 'htmlFor' instead          react/no-unknown-property
+  61:13  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  62:15  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  63:17  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  65:46  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+  68:13  error  Unknown property 'class' found, use 'className' instead      react/no-unknown-property
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/Header.js
+  10:14  error  'basket' is assigned a value but never used       no-unused-vars
+  10:30  error  'dispatch' is assigned a value but never used     no-unused-vars
+  13:11  error  'handleLogin' is assigned a value but never used  no-unused-vars
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/Header.test.js
+   7:1  error  'it' is not defined        no-undef
+  18:1  error  'describe' is not defined  no-undef
+  19:5  error  'test' is not defined      no-undef
+  21:9  error  'expect' is not defined    no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/Header2.js
+  6:10  error  'auth' is defined but never used           no-unused-vars
+  7:10  error  'useStateValue' is defined but never used  no-unused-vars
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/Header2.test.js
+  6:1  error  'it' is not defined  no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/Home.test.js
+  6:1  error  'it' is not defined  no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/Login.js
+  75:16  error  'props' is defined but never used  no-unused-vars
+  85:19  error  'auth' is defined but never used   no-unused-vars
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/PCHome.test.js
+  6:1  error  'it' is not defined  no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/Product.js
+  3:9   error  'Link' is defined but never used        no-unused-vars
+  4:19  error  'title' is missing in props validation  react/prop-types
+  4:26  error  'image' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/SectionHeader.js
+  20:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/Square.js
+   4:29  error  'isWinningSquare' is missing in props validation  react/prop-types
+   8:34  error  'onClick' is missing in props validation          react/prop-types
+  10:20  error  'value' is missing in props validation            react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/Square.test.js
+   5:1   error  'describe' is not defined  no-undef
+   6:5   error  'test' is not defined      no-undef
+   8:9   error  'expect' is not defined    no-undef
+  14:1   error  'test' is not defined      no-undef
+  15:16  error  'jest' is not defined      no-undef
+  21:5   error  'expect' is not defined    no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/StateProvider.js
+  9:33  error  'reducer' is missing in props validation       react/prop-types
+  9:42  error  'initialState' is missing in props validation  react/prop-types
+  9:56  error  'children' is missing in props validation      react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/Button.js
+  26:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/ButtonGroup.js
+  5:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/Checkbox.js
+  22:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/FormHint.js
+  17:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/FormLabel.js
+  18:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/Image.js
+  22:3  error  'className' is missing in props validation                       react/prop-types
+  36:3  error  Definition for rule 'react-hooks/exhaustive-deps' was not found  react-hooks/exhaustive-deps
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/Input.js
+  42:3   error  'className' is missing in props validation  react/prop-types
+  75:64  error  'id' is missing in props validation         react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/Modal.js
+  23:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/Radio.js
+  22:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/Select.js
+  37:3   error  'className' is missing in props validation  react/prop-types
+  60:64  error  'id' is missing in props validation         react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/SmoothScroll.js
+  13:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/elements/Switch.js
+  24:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/layout/Footer.js
+  19:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/layout/Header.js
+  24:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/layout/partials/FooterNav.js
+   6:3   error  'className' is missing in props validation                       react/prop-types
+  28:28  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/layout/partials/FooterSocial.js
+  5:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/layout/partials/Logo.js
+   7:3   error  'className' is missing in props validation  react/prop-types
+  24:18  error  'require' is not defined                    no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/sections/FeaturesSplit.js
+   86:24  error  'require' is not defined  no-undef
+  112:24  error  'require' is not defined  no-undef
+  138:24  error  'require' is not defined  no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/sections/FeaturesTiles.js
+   66:28  error  'require' is not defined  no-undef
+   88:28  error  'require' is not defined  no-undef
+  110:28  error  'require' is not defined  no-undef
+  132:28  error  'require' is not defined  no-undef
+  154:28  error  'require' is not defined  no-undef
+  176:28  error  'require' is not defined  no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/sections/Hero.js
+  91:22  error  'require' is not defined  no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/components/sections/partials/SectionHeader.js
+  20:3  error  'className' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/index.test.js
+  6:1  error  'it' is not defined  no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/layouts/LayoutDefault.js
+  5:26  error  'children' is missing in props validation  react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/login.test.js
+   7:1  error  'test' is not defined    no-undef
+  11:5  error  'expect' is not defined  no-undef
+  14:5  error  'expect' is not defined  no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/reducer.test.js
+  1:8  error  'reducer' is defined but never used  no-unused-vars
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/serviceWorker.js
+  24:9   error  'process' is not defined  no-undef
+  26:33  error  'process' is not defined  no-undef
+  35:26  error  'process' is not defined  no-undef
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/utils/AppRoute.js
+   5:3   error  'component' is missing in props validation  react/prop-types
+   6:3   error  'layout' is missing in props validation     react/prop-types
+  10:56  error  'children' is missing in props validation   react/prop-types
+
+/Users/mac/Desktop/ReopenCU1/amzon-clone1/src/utils/ScrollReveal.js
+   5:22  error  Component definition is missing display name                     react/display-name
+  51:3   error  Definition for rule 'react-hooks/exhaustive-deps' was not found  react-hooks/exhaustive-deps
+  72:5   error  Definition for rule 'react-hooks/exhaustive-deps' was not found  react-hooks/exhaustive-deps
+
+✖ 113 problems (113 errors, 0 warnings)
+  23 errors and 0 warnings potentially fixable with the `--fix` option.
