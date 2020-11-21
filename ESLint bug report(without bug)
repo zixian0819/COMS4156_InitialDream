@@ -1,0 +1,4 @@
+(base) MacdeAir:amzon-clone1 mac$ eslint src
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+✖ 0 problems (0 errors, 0 warnings)
+  0 errors and 0 warnings potentially fixable with the `--fix` option.
